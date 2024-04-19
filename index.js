@@ -19,11 +19,7 @@ const connect = async () => {
     throw error;
   }
 };
- const corsOptions = {
-   origin: 'https://frontendkiraa.vercel.app',
-   methods: 'GET, POST, PUT, DELETE',
-};
-app.use(cors(corsOptions));
+app.use(cors());
 app.use(cookieParser())
 app.use(express.json())
 app.use("/api/auth",authroute)
